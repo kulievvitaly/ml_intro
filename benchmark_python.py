@@ -3,7 +3,7 @@ import time
 
 def f_list():
     l = []
-    for i in range(10**7):
+    for i in range(10**6):
         l.append((-1)**i*i**2)
     l.sort()
 
@@ -36,6 +36,17 @@ def f_sum():
 ubuntu 22.04
 cpu 11800h
 
+python3.10
+f_list 0.454 seconds
+f_dict 2.419 seconds
+f_str  1.385 seconds
+f_sum  3.652 seconds
+
+python3.11
+f_list 0.233 seconds +95%
+f_dict 1.005 seconds +140%
+f_str  0.899 seconds +54%
+f_sum  2.743 seconds +33%
 
 '''
 
@@ -51,33 +62,33 @@ if __name__ == '__main__':
     print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
 
 
-    # elapsed_list = []
-    # for _ in range(10):
-    #     timer = time.time()
-    #     f_dict()
-    #     elapsed = time.time() - timer
-    #     print('elapsed %.3f seconds' % elapsed)
-    #     elapsed_list.append(elapsed)
-    #
-    # print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
+    elapsed_list = []
+    for _ in range(10):
+        timer = time.time()
+        f_dict()
+        elapsed = time.time() - timer
+        print('elapsed %.3f seconds' % elapsed)
+        elapsed_list.append(elapsed)
+
+    print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
 
 
-    # elapsed_list = []
-    # for _ in range(10):
-    #     timer = time.time()
-    #     f_str()
-    #     elapsed = time.time() - timer
-    #     print('elapsed %.3f seconds' % elapsed)
-    #     elapsed_list.append(elapsed)
-    #
-    # print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
+    elapsed_list = []
+    for _ in range(10):
+        timer = time.time()
+        f_str()
+        elapsed = time.time() - timer
+        print('elapsed %.3f seconds' % elapsed)
+        elapsed_list.append(elapsed)
 
-    # elapsed_list = []
-    # for _ in range(10):
-    #     timer = time.time()
-    #     f_sum()
-    #     elapsed = time.time() - timer
-    #     print('elapsed %.3f seconds' % elapsed)
-    #     elapsed_list.append(elapsed)
-    #
-    # print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
+    print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
+
+    elapsed_list = []
+    for _ in range(10):
+        timer = time.time()
+        f_sum()
+        elapsed = time.time() - timer
+        print('elapsed %.3f seconds' % elapsed)
+        elapsed_list.append(elapsed)
+
+    print('elapsed average %.3f seconds' % (sum(elapsed_list) / len(elapsed_list)))
