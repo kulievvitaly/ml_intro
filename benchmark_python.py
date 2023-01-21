@@ -35,18 +35,21 @@ def f_sum():
 '''
 ubuntu 22.04
 cpu 11800h
+            
+            
+            python3.10
+            f_list 0.454 seconds
+            f_dict 2.419 seconds
+            f_str  1.385 seconds
+            f_sum  3.652 seconds
+            
+            python3.11
+            f_list 0.233 seconds +95%
+            f_dict 1.005 seconds +140%
+            f_str  0.899 seconds +54%
+            f_sum  2.743 seconds +33%
 
-python3.10
-f_list 0.454 seconds
-f_dict 2.419 seconds
-f_str  1.385 seconds
-f_sum  3.652 seconds
 
-python3.11
-f_list 0.233 seconds +95%
-f_dict 1.005 seconds +140%
-f_str  0.899 seconds +54%
-f_sum  2.743 seconds +33%
 
 '''
 
